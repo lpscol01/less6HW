@@ -1,0 +1,27 @@
+<h1>All of your subjects!</h1>
+
+Subject: <%=@topic.subject %> 
+<br>
+Inventor: <%=@topic.user.email %>
+<br>
+<%=distance_of_time_in_words(Time.now, @topic.created_at) %>
+<br>
+<br>
+<%@topic.posts.each do |post| %>
+	Reply
+	<br>
+	<b>Title: <%=post.title %> </b>
+	<br>
+	<i> <%=post.user.email %> thinks: </i>
+	<br>
+	<%=post.body %>
+	<br>
+	<br>
+<% end %>
+<br>
+<br>
+
+<%=link_to "Reply to this thought", new_topic_post_path(@topic) %>
+<br>
+
+<%= link_to "See other topics", topics_path %>

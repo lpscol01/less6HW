@@ -1,0 +1,13 @@
+<h1>Organize your thoughts...</h1>
+
+<% @topics.each do |topic| %>
+	Subject: <%=link_to topic.subject, topic_path(topic) %>
+	<br>
+	Inventor: <%=topic.user.email %>
+	<br>
+	<%= topic.created_at.strftime("%b, %d, %Y") %>
+	<br>
+	<br>
+<% end %>
+
+<%=link_to "New Topic", new_topic_path %>

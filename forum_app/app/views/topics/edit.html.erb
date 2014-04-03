@@ -1,0 +1,8 @@
+<h1>Change your topic?</h1>
+
+<%=form_for [@topic] do |t| %>
+	<%=t.label :subject, "Subject" %>  
+	<%=t.text_field :subject %>
+	<%=t.submit :submit %>
+
+<% end %>

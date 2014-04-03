@@ -1,0 +1,12 @@
+<h1>Post your thoughts about this topic</h1>
+<h2><%=@topic.subject %></h2>
+<%=form_for [@topic, @post] do |t| %>
+	<%=t.label :title, "Title" %>  
+	<%=t.text_field :title %>
+	<br>
+	<%=t.label :body, "Body" %>  
+	<%=t.text_area :body %>
+	<br>
+	<%=t.submit :submit %>
+
+<% end %>

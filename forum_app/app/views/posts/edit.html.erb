@@ -1,0 +1,10 @@
+<h1>Rephrase your thoughts?</h1>
+
+<%=form_for [@post.user, @post] do |t| %>
+	<%=t.label :title, "Title" %>  
+	<%=t.text_field :title %>
+	<%=t.label :body, "Body" %>  
+	<%=t.text_field :body %>
+	<%=t.submit :submit %>
+
+<% end %>

@@ -1,0 +1,14 @@
+<h1>Join us!</h1>
+
+<%= form_for @user do |t| %>
+	<%=t.label :fname, "First Name" %> 
+	<%=t.text_field :fname %>
+	<%=t.label :lname, "Last Name" %> 
+	<%=t.text_field :lname %>
+	<%=t.label :email, "Email" %> 
+	<%=t.text_field :email %>
+	<%=t.label :password %>  
+	<%=t.password_field :password %>
+	<%=t.submit :submit %>
+
+<% end %>

@@ -1,0 +1,14 @@
+<h1>List of all the people who belong</h1>
+
+<%= @users.each do |user| %>
+	<%=link_to user.fname + " " + user.lname, user_path(user) %>
+	<br>
+	
+
+<%= link_to "delete me", user_path(user), method: :delete, confirm: "Are you sure?" %>
+	<br>
+	<br>
+	<br>
+	
+
+<% end %>

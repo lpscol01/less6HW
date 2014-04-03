@@ -1,0 +1,17 @@
+<h1>I am a user</h1>
+
+First Name: <%=@user.fname %>
+<br>
+
+Last Name: <%=@user.lname %>
+<br>
+Email: <%=@user.email %>
+<br>
+<br>
+Topics:
+<br>
+<% current_user.topics.each do |topic| %>
+	<%=link_to topic.subject, topic_path(topic) %>
+<% end %>
+
+<%=link_to "New topic?", new_topic_path %>
